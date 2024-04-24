@@ -1,0 +1,46 @@
+@use "../../sass/assets" as a;
+
+nav {
+  ul {
+    position: absolute;
+    top: 50%;
+    left: 53.3%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: rotateY(0deg) rotate(90deg);
+  }
+  li {
+    font-family: a.$casefile;
+    text-transform: uppercase;
+    width: 230px;
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: 1.3em;
+    background-color: darken(a.$filecolor, 5%);
+    padding: 0.7em 1.5em;
+    border-radius: 10px 10px 0 0;
+    box-shadow: inset 0px -3px 5px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+
+    &:hover {
+      background-color: a.$filecolor;
+    }
+  }
+  a {
+    background-color: white;
+    color: black;
+    padding: 0.2em 1em;
+  }
+  li.current {
+    box-shadow: none;
+    background-color: a.$filecolor;
+  }
+  li#goback {
+    width: auto;
+    font-family: a.$x;
+    a {
+      background-color: initial;
+    }
+  }
+}

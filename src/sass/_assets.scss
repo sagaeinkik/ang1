@@ -1,0 +1,10 @@
+$breadreport: Courier, "Courier New", monospace;
+$casefile: "Markazi Text", "Times New Roman", serif;
+$x: "Mochiy Pop One", Arial, Helvetica, sans-serif;
+
+@mixin reportHeadlines {
+  font-family: $breadreport;
+  font-weight: bold;
+}
+
+$filecolor: #ae8662;

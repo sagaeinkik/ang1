@@ -1,0 +1,51 @@
+@use "../../sass/assets" as a;
+
+.framsida {
+  font-family: a.$casefile;
+  width: 70%;
+  margin: auto;
+  img {
+    width: 50%;
+    margin: 7em auto 4em;
+    display: block;
+  }
+}
+
+.brottsregister {
+  padding-top: 5em;
+  .classification {
+    letter-spacing: 1px;
+    font-weight: bold;
+    font-size: 3em;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .details {
+    font-weight: 500;
+    font-size: 1.5em;
+    text-align: center;
+  }
+}
+
+.municipality {
+  margin: auto;
+  width: fit-content;
+  h2 {
+    text-transform: uppercase;
+    font-size: 6em;
+    font-weight: 400;
+  }
+  p {
+    @extend h2;
+    font-size: 3.6em;
+    margin-top: -0.4em;
+  }
+}
+
+p#casenumber {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 2.5em;
+  text-align: center;
+  margin-top: 4em;
+}

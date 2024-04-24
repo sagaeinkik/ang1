@@ -1,0 +1,53 @@
+@use "../../sass/assets" as a;
+div.paper {
+  background-color: #fdfdfd;
+  background-image: url(../../assets/img/emblemopacity.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 40%;
+  width: 85%;
+  position: relative;
+  left: 5%;
+  top: 2.5%;
+  height: 75vh;
+  font-family: a.$breadreport;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+.grid-container {
+  position: relative;
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  grid-gap: 1em;
+}
+
+img:not(#gem) {
+  width: 100%;
+  transform: rotateY(0deg) rotate(-5deg);
+  border: 25px solid white;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+}
+#gem {
+  width: 30px;
+  position: absolute;
+  left: 7em;
+  top: -0.7em;
+  transform: rotateY(0deg) rotate(-7deg);
+}
+
+.presentation {
+  padding: 4em 2em 2em 1em;
+  text-transform: uppercase;
+
+  #date {
+    margin-bottom: 3.5em;
+    border-bottom: none;
+  }
+  p {
+    margin-bottom: 1.3em;
+    width: 100%;
+    border-bottom: 2px solid black;
+  }
+  span.bold {
+    font-weight: bold;
+  }
+}
