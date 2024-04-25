@@ -1,6 +1,7 @@
-<app-paper>
+<app-paper> <!-- Pappers-komponent -->
     <div class="grid-container">
         <div class="picture">
+            <!-- Array av bilder samt funktion som klickar sig igenom arrayen -->
             <img [src]="images[currentImageIndex]" alt="Cremefärgad golden retriever-tik" (click)="changeImage()">
             <img [src]="paperclip" alt="gem" id="gem">
         </div> <!-- /div.picture -->
@@ -15,5 +16,5 @@
             </div> <!-- /div.info -->
         </div> <!-- /div.presentation -->
     </div><!--  /div.grid-container -->
-    <app-crimetext></app-crimetext>
+    <app-crimetext></app-crimetext> <!-- Texten med linjer -->
 </app-paper>

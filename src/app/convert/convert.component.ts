@@ -10,11 +10,13 @@ import { PaperComponent } from '../paper/paper.component';
   styleUrl: './convert.component.scss',
 })
 export class ConvertComponent {
+  //Variabler
   convertThis: number = 0;
   result: number = 0;
   startUnit: string = '';
   endUnit: string = '';
 
+  //Metoder
   celsiusToFahrenhet() {
     let converted: number = (this.convertThis * 9) / 5 + 32;
     converted = Math.round(converted * 100) / 100;

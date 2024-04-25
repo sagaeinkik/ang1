@@ -2,9 +2,10 @@
     <h2>Konvertera</h2>
     <div class="convert">
         <label for="input">Värde att konvertera:</label>
-        <input type="number" name="input" id="input" [(ngModel)]="convertThis">
+        <input type="number" name="input" id="input" [(ngModel)]="convertThis"> <!-- Tvåvägsbindning av data -->
         <p class="alternativ">Alternativ:</p>
         <div class="button-container">
+            <!-- Vid klick körs funktionen för varje konvertering -->
             <button (click)="cmToFeet()">Centimeter <span class="arrow">&#10132;</span> feet</button>
             <button (click)="feetToCm()">Feet <span class="arrow">&#10132;</span> centimeter</button>
             <button (click)="celsiusToFahrenhet()">Celsius <span class="arrow">&#10132;</span> Fahrenheit</button>
@@ -12,6 +13,7 @@
         </div>
         <div class="results">
             <p class="bold">Resultat: </p>
+            <!-- Skriv ut resultatvariabler -->
             <p class="output">{{ convertThis + startUnit + " motsvarar " + result + endUnit
                 }}
             </p>

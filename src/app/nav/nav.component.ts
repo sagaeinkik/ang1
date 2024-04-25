@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router, RouterLink, RouterLinkActive } from '@angular/router';
+import { Router, RouterLink, RouterLinkActive } from '@angular/router'; //Router
 
 @Component({
   selector: 'app-nav',
@@ -11,6 +11,7 @@ import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 export class NavComponent {
   constructor(private router: Router) {}
 
+  /* Metod för navigering så att man kan trycka på hela list element och inte bara a-elementet */
   navigateTo(path: string) {
     this.router.navigateByUrl(path);
   }

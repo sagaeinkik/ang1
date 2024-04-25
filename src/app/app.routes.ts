@@ -9,4 +9,5 @@ export const routes: Routes = [
   { path: 'loka', component: LokaComponent },
   { path: 'convert', component: ConvertComponent },
   { path: 'solution', component: SolutionComponent },
+  { path: '**', component: HomeComponent },
 ];

@@ -1,5 +1,6 @@
 <nav>
     <ul>
+        <!-- click-effekt på hela li för navigering, routerlinkactive på li för styling, routerlink istället för href på a-element -->
         <li id="goback" (click)="navigateTo('/home')" routerLinkActive="current"><a routerLink="/home">X</a></li>
         <li (click)="navigateTo('/loka')" routerLinkActive="current"><a routerLink="/loka">Loka</a></li>
         <li (click)="navigateTo('/convert')" routerLinkActive="current"><a routerLink="/convert">Konvertera</a></li>

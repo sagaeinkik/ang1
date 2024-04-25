@@ -8,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrl: './home.component.scss',
 })
 export class HomeComponent {
+  //Sökväg till emblem-bilden
   emblem: string = '../../assets/img/emblem.svg';
 }

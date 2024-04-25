@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { PaperComponent } from '../paper/paper.component';
+import { PaperComponent } from '../paper/paper.component'; //"Pappret"
 
 @Component({
   selector: 'app-solution',
