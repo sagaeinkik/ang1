@@ -25,4 +25,4 @@ Den är framtagen med Scss för styling, och ingen SSR. Utöver de dependencies 
 
 ## Publikation
 
-Titta här sen
+Den publicerade hemsidan finns på netlify: https://ang1-sek.netlify.app/
