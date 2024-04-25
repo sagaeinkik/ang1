@@ -87,12 +87,21 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "netlify.toml"
             ],
             "styles": [
               "src/styles.scss"
             ],
             "scripts": []
+          }
+        },
+        "deploy": {
+          "builder": "@netlify-builder/deploy:deploy",
+          "options": {
+            "outputPath": "dist/ang1",
+            "netlifyToken": "nfp_QgrUm5pe2KWj7nKg7wTZjV8z6HuNpsM54487",
+            "siteId": "c9035765-51a7-4de7-bf1b-b78f4add913e"
           }
         }
       }
