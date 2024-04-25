@@ -1,6 +1,9 @@
 @use "../../sass/assets" as a;
+
+//wrapper som ska likna ett papper
 div.paper {
   background-color: #fdfdfd;
+  //Emblem i bakgrund, positionera i mitten
   background-image: url(../../assets/img/emblemopacity.png);
   background-repeat: no-repeat;
   background-position: center;
@@ -10,5 +13,18 @@ div.paper {
   min-height: 1100px;
   margin: auto;
   padding-bottom: 4em;
+  //skugga
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+//media queries
+@media (max-width: 800px) {
+  div.paper {
+    padding-bottom: 1em;
+  }
+  //minska höjd
+  div.paper {
+    height: auto;
+    min-height: 600px;
+  }
 }

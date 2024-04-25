@@ -1,46 +1,120 @@
 @use "../../sass/assets" as a;
-
+//Navigering
 nav {
   ul {
+    //Sätt position absolute
     position: absolute;
+    //positionera till höger om filen
     top: 50%;
     left: 43.4%;
+    //Gör bredare
     width: 120%;
+    //Flex och sprid
     display: flex;
     justify-content: space-between;
+    //rotera 90 grader
     transform: rotateY(0deg) rotate(90deg);
   }
   li {
+    //List items
     font-family: a.$casefile;
     text-transform: uppercase;
-    width: 230px;
+    //Fast bredd så de är likadana
+    width: 220px;
     text-align: center;
     letter-spacing: 1px;
     font-size: 1.3em;
+    //Gör mörkare än filen
     background-color: darken(a.$filecolor, 5%);
     padding: 0.7em 1.5em;
+    //Border radius men bara på högersidan
     border-radius: 10px 10px 0 0;
+    //Skugga på insidan så det ser ut som de ligger bakom framsidan
     box-shadow: inset 0px -3px 5px rgba(0, 0, 0, 0.3);
     cursor: pointer;
-
+    //Gör ljusare när man hovrar
     &:hover {
       background-color: a.$filecolor;
     }
   }
+
   a {
+    //Styla så de (föroppningsvis) ser ut som etiketter
     background-color: white;
     color: black;
     padding: 0.2em 1em;
   }
+
   li.current {
+    //Nuvarande undersidas flik blir samma färg som mappen och skugglös
     box-shadow: none;
     background-color: a.$filecolor;
   }
   li#goback {
+    //Fliken som leder tillbaks till start
     width: auto;
     font-family: a.$x;
     a {
       background-color: initial;
     }
+  }
+}
+
+//Media queries
+
+/* Härifrån och ner till nästa kommentar handlar alla queries om att positionera menyn bättre vid olika brytpunkter och göra texten+padding mindre för att få plats */
+@media (max-width: 875px) {
+  nav ul {
+    width: 125%;
+    left: 40.2%;
+  }
+  nav li {
+    padding: 0.3em 1.4em;
+    width: 180px;
+  }
+  nav a {
+    padding: 0.1em 0.7em;
+  }
+}
+@media (max-width: 725px) {
+  nav ul {
+    width: 125%;
+    left: 40.8%;
+  }
+}
+@media (max-width: 600px) {
+  nav ul {
+    width: 140%;
+    left: 33.1%;
+  }
+  nav li {
+    font-size: 1em;
+  }
+}
+@media (max-width: 490px) {
+  nav ul {
+    width: 200%;
+    left: 3.5%;
+  }
+  nav li {
+    font-size: 1em;
+  }
+}
+
+//Flytta upp menyn till ovansidan av foldern
+@media (max-width: 430px) {
+  nav ul {
+    top: -31px;
+    left: 2px;
+    transform: rotateY(0deg) rotate(0deg);
+    width: 95%;
+  }
+  nav li {
+    width: fit-content;
+    font-size: 0.8em;
+    padding: 0.5em;
+  }
+  nav a {
+    padding: 0.2em;
   }
 }

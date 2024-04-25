@@ -1,10 +1,14 @@
 @use "../../sass/assets" as a;
+
+//typsnitt och vikt
 app-paper {
   font-family: a.$breadreport;
   .bold {
     font-weight: bold;
   }
 }
+
+//grid med bild och detaljer om hunden
 .grid-container {
   position: relative;
   display: grid;
@@ -12,12 +16,15 @@ app-paper {
   grid-gap: 1em;
 }
 
+//Bilden
 img:not(#gem) {
   width: 100%;
   transform: rotateY(0deg) rotate(-5deg);
+  //Ram för att se ut som utskriven bild
   border: 25px solid white;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
 }
+//Gem-ikon: position absolute
 #gem {
   width: 30px;
   position: absolute;
@@ -26,10 +33,11 @@ img:not(#gem) {
   transform: rotateY(0deg) rotate(-7deg);
 }
 
+//Infotexten om hunden
 .presentation {
   padding: 4em 2em 2em 1em;
   text-transform: uppercase;
-
+  //datum då brottet begicks
   #date {
     margin-bottom: 3.5em;
     border-bottom: none;
@@ -38,5 +46,44 @@ img:not(#gem) {
     margin-bottom: 1.3em;
     width: 100%;
     border-bottom: 2px solid black;
+  }
+}
+
+//Media queries
+@media (max-width: 680px) {
+  //Gör om grid till flex
+  .grid-container {
+    display: flex;
+    flex-direction: column;
+  }
+  //Gör bild mindre, positionera i mitten
+  img:not(#gem) {
+    width: 60%;
+    margin: auto;
+    display: block;
+    border: 15px solid white;
+  }
+  //positionera om gemet
+  #gem {
+    left: 45%;
+    top: -0.45em;
+    width: 20px;
+  }
+  //ta bort lite padding och bredda presentationen
+  .presentation {
+    width: 100%;
+    padding: 1.5em;
+    margin: auto;
+
+    #date {
+      margin-bottom: 2em;
+    }
+  }
+}
+
+@media (max-width: 475px) {
+  //Gör presentationstexten mindre
+  .presentation {
+    font-size: 0.85em;
   }
 }

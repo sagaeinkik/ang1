@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
+import { PaperComponent } from '../paper/paper.component';
 
 @Component({
   selector: 'app-solution',
   standalone: true,
-  imports: [],
+  imports: [PaperComponent],
   templateUrl: './solution.component.html',
-  styleUrl: './solution.component.scss'
+  styleUrl: './solution.component.scss',
 })
-export class SolutionComponent {
-
-}
+export class SolutionComponent {}

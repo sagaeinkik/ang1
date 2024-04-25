@@ -1,10 +1,13 @@
 @use "../../sass/assets" as a;
+
+//Sätt typsnitt
 app-paper {
   font-family: a.$casefile;
 }
 .bold {
   font-weight: bold;
 }
+//Sätt rubriken i mitten
 h2 {
   font-size: 2.3em;
   width: 80%;
@@ -13,22 +16,25 @@ h2 {
   padding-top: 0.8em;
   border-bottom: 2px solid black;
 }
-
+//Peta ner konverteringen lite
 div.convert {
   width: 60%;
   margin: 4em auto;
 
   label {
+    //Gör label till block
     display: block;
     font-size: 1.3em;
   }
   input,
   button {
+    //Bredda input och knappar, sätt font
     width: 100%;
     padding: 0.5em;
     font-family: a.$breadreport;
   }
   input {
+    //Specifikare regler för input; borderfäger och margins
     font-size: 1em;
     margin: 0.6em 0 2em;
     border-radius: 1em;
@@ -36,6 +42,7 @@ div.convert {
     border-bottom: 3px solid #69790e;
   }
   button {
+    //Allmänna knappregler
     border-radius: 1em;
     border: none;
     color: white;
@@ -45,23 +52,26 @@ div.convert {
   }
 
   button:nth-child(-n + 2) {
+    //Gör de första två knapparna i en färg
     background-color: #3b4c6e;
   }
   button:nth-last-child(-n + 2) {
+    //de sista två knapparna i en annan färg
     background-color: #69790e;
   }
-
   .alternativ {
+    //Texten "alternativ:"
     font-size: 1.3em;
     margin-bottom: 0.3em;
   }
 }
+//Knapp-grid
 .button-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 1em;
 }
-
+//Resultatet av konverteringen
 div.results {
   margin-top: 5em;
   p.bold {
@@ -69,5 +79,24 @@ div.results {
   }
   p.output {
     font-size: 1.5em;
+  }
+}
+
+//Media queries
+@media (max-width: 600px) {
+  //Bredda div som ligger runt input och knappar osv
+  div.convert {
+    width: 80%;
+  }
+}
+
+@media (max-width: 370px) {
+  //Ta bort grid
+  .button-container {
+    display: flex;
+    flex-direction: column;
+  }
+  div.results {
+    margin-top: 2.3em;
   }
 }

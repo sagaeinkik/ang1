@@ -1,16 +1,19 @@
 @use "../../sass/assets" as a;
 
+//Texten som står på framsidan
 .framsida {
   font-family: a.$casefile;
   width: 70%;
   margin: auto;
   img {
+    //emblem
     width: 50%;
     margin: 7em auto 4em;
     display: block;
   }
 }
 
+//Text med info om att det är ett brottsregister
 .brottsregister {
   padding-top: 5em;
   .classification {
@@ -27,6 +30,7 @@
   }
 }
 
+//Text ÅRE KOMMUN hundbrottsenheten
 .municipality {
   margin: auto;
   width: fit-content;
@@ -42,10 +46,74 @@
   }
 }
 
+//Ärendenummer
 p#casenumber {
   font-weight: bold;
   text-transform: uppercase;
   font-size: 2.5em;
   text-align: center;
   margin-top: 4em;
+}
+
+//Media queries
+@media (max-width: 850px) {
+  //Justera textstorlekar för att undvika radbrytning
+  .municipality h2 {
+    font-size: 3.9em;
+  }
+  .municipality p {
+    font-size: 2.3em;
+  }
+}
+
+@media (max-width: 595px) {
+  //bredda framsida, gör bilden större, justera textstorlekar
+  .framsida {
+    width: 90%;
+  }
+  img {
+    width: 80%;
+  }
+  p#casenumber {
+    font-size: 2em;
+  }
+  .brottsregister .classification {
+    font-size: 2em;
+  }
+  .brottsregister .details {
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 485px) {
+  //Justera textstorlekar lite till
+  .municipality h2 {
+    font-size: 3em;
+  }
+  .municipality p {
+    font-size: 1.8em;
+  }
+  p#casenumber {
+    font-size: 1.5em;
+  }
+  .brottsregister .classification {
+    font-size: 1.5em;
+  }
+  .brottsregister .details {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 430px) {
+  //Bredda framsida, gör bild större, ändra padding
+  .framsida {
+    width: 100%;
+    img {
+      width: 100%;
+      margin: 4em auto 2em;
+    }
+  }
+  .brottsregister {
+    padding-top: 1em;
+  }
 }

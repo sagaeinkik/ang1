@@ -1,0 +1,27 @@
+@use "../../sass/assets" as a;
+
+//Sätt typsnitt och storlek
+app-paper {
+  font-family: a.$casefile;
+  font-size: 1.3em;
+}
+h2 {
+  width: 80%;
+  text-align: center;
+  border-bottom: 2px solid black;
+  margin: auto;
+  padding-top: 1em;
+}
+//Bredder
+.solution {
+  max-width: 30em;
+  margin: auto;
+  padding: 1em;
+
+  h3 {
+    margin-top: 1em;
+  }
+  p {
+    margin-bottom: 0.7em;
+  }
+}

@@ -1,22 +1,56 @@
 @use "../sass/assets" as a;
+
+//Styla div som en case file
 div.file {
-  width: 70%;
+  width: 82%;
   max-width: 850px;
   height: auto;
+  //Sätt minimum-höjd
   min-height: 1200px;
   background-color: a.$filecolor;
+  //centrera
   margin: 4em auto;
+  //Rundare hörn på högersidan
   border-radius: 5px 25px 25px 5px;
   box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.6);
+  //pos: relative så inget flyr utanför senare
   position: relative;
   padding: 2.5em;
 }
+//Angular I-texten
 h1 {
   text-align: center;
   font-family: a.$casefile;
   font-size: 3em;
 }
+//av vem-texten
 p.credits {
   @extend h1;
   font-size: 1.3em;
+  padding: 0 0.5em;
+}
+
+//Media queries
+@media (max-width: 975px) {
+  div.file {
+    //bredda lite och ge plats åt menyn
+    margin-left: 0.5em;
+    width: 90%;
+  }
+}
+
+//Gör mindre padding (åt pappret)
+@media (max-width: 600px) {
+  div.file {
+    padding: 1.3em;
+  }
+}
+
+//Ta upp hela utrymmet när menyn flyttar upp
+@media (max-width: 430px) {
+  div.file {
+    width: 98%;
+    margin: 3em auto;
+    min-height: 750px;
+  }
 }
