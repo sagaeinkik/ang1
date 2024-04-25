@@ -1,0 +1,40 @@
+.lined-text-container {
+  width: 80%;
+  margin: 2em auto 3em;
+  .bold {
+    font-weight: bold;
+  }
+  p span.bold {
+    text-transform: uppercase;
+  }
+
+  div.pattern {
+    width: 100%;
+    height: auto;
+    margin-top: 0.8em;
+    min-height: 130px;
+    background-image: repeating-linear-gradient(
+      rgba(255, 255, 255, 0) 0px,
+      rgba(255, 255, 255, 0) 23px,
+      black 26px
+    );
+  }
+  div.pattern.incident {
+    min-height: 220px;
+  }
+  div.text {
+    text-transform: initial;
+
+    p {
+      line-height: 1.65;
+    }
+  }
+}
+p.punishment {
+  text-align: center;
+  margin-top: 2em;
+  text-transform: uppercase;
+  span.no-bold {
+    font-weight: 400;
+  }
+}

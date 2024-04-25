@@ -1,9 +1,9 @@
-<div class="paper">
+<app-paper>
     <div class="grid-container">
         <div class="picture">
-            <img [src]="img2" alt="En cremefärgad golden retriever-tik">
+            <img [src]="images[currentImageIndex]" alt="Cremefärgad golden retriever-tik" (click)="changeImage()">
             <img [src]="paperclip" alt="gem" id="gem">
-        </div>
+        </div> <!-- /div.picture -->
         <div class="presentation">
             <p id="date"><span class="bold">Datum: </span>24/4 2024</p>
             <div class="info">
@@ -12,9 +12,8 @@
                 <p><span class="bold">Ålder vid brott: </span>{{ crimeAge }}</p>
                 <p><span class="bold">Vikt: </span>{{ vikt }}</p>
                 <p><span class="bold">Sysselsättning: </span>{{ occupation }}</p>
-
-            </div>
-        </div>
-    </div>
-    <p class="punishment">Föreslagen påföljd: Indraget koppelfri-privilegie</p>
-</div>
+            </div> <!-- /div.info -->
+        </div> <!-- /div.presentation -->
+    </div><!--  /div.grid-container -->
+    <app-crimetext></app-crimetext>
+</app-paper>

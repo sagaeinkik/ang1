@@ -1,17 +1,9 @@
 @use "../../sass/assets" as a;
-div.paper {
-  background-color: #fdfdfd;
-  background-image: url(../../assets/img/emblemopacity.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 40%;
-  width: 85%;
-  position: relative;
-  left: 5%;
-  top: 2.5%;
-  height: 75vh;
+app-paper {
   font-family: a.$breadreport;
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  .bold {
+    font-weight: bold;
+  }
 }
 .grid-container {
   position: relative;
@@ -46,8 +38,5 @@ img:not(#gem) {
     margin-bottom: 1.3em;
     width: 100%;
     border-bottom: 2px solid black;
-  }
-  span.bold {
-    font-weight: bold;
   }
 }

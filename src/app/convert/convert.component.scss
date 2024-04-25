@@ -1,0 +1,73 @@
+@use "../../sass/assets" as a;
+app-paper {
+  font-family: a.$casefile;
+}
+.bold {
+  font-weight: bold;
+}
+h2 {
+  font-size: 2.3em;
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 0.8em;
+  border-bottom: 2px solid black;
+}
+
+div.convert {
+  width: 60%;
+  margin: 4em auto;
+
+  label {
+    display: block;
+    font-size: 1.3em;
+  }
+  input,
+  button {
+    width: 100%;
+    padding: 0.5em;
+    font-family: a.$breadreport;
+  }
+  input {
+    font-size: 1em;
+    margin: 0.6em 0 2em;
+    border-radius: 1em;
+    border-top: 3px solid #3b4c6e;
+    border-bottom: 3px solid #69790e;
+  }
+  button {
+    border-radius: 1em;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 1em;
+    font-size: 0.9em;
+  }
+
+  button:nth-child(-n + 2) {
+    background-color: #3b4c6e;
+  }
+  button:nth-last-child(-n + 2) {
+    background-color: #69790e;
+  }
+
+  .alternativ {
+    font-size: 1.3em;
+    margin-bottom: 0.3em;
+  }
+}
+.button-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1em;
+}
+
+div.results {
+  margin-top: 5em;
+  p.bold {
+    font-size: 2em;
+  }
+  p.output {
+    font-size: 1.5em;
+  }
+}

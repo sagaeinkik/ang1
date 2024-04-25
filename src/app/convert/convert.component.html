@@ -1,0 +1,20 @@
+<app-paper>
+    <h2>Konvertera</h2>
+    <div class="convert">
+        <label for="input">Värde att konvertera:</label>
+        <input type="number" name="input" id="input" [(ngModel)]="convertThis">
+        <p class="alternativ">Alternativ:</p>
+        <div class="button-container">
+            <button (click)="cmToFeet()">Centimeter <span class="arrow">&#10132;</span> feet</button>
+            <button (click)="feetToCm()">Feet <span class="arrow">&#10132;</span> centimeter</button>
+            <button (click)="celsiusToFahrenhet()">Celsius <span class="arrow">&#10132;</span> Fahrenheit</button>
+            <button (click)="fahrenheitToCelsius()">Fahrenheit <span class="arrow">&#10132;</span> Celsius</button>
+        </div>
+        <div class="results">
+            <p class="bold">Resultat: </p>
+            <p class="output">{{ convertThis + startUnit + " motsvarar " + result + endUnit
+                }}
+            </p>
+        </div>
+    </div> <!-- /div.convert -->
+</app-paper>
