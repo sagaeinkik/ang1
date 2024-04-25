@@ -5,7 +5,6 @@ import { ConvertComponent } from './convert/convert.component';
 import { SolutionComponent } from './solution/solution.component';
 
 export const routes: Routes = [
-  { path: '/', component: HomeComponent },
   { path: 'home', component: HomeComponent },
   { path: 'loka', component: LokaComponent },
   { path: 'convert', component: ConvertComponent },
